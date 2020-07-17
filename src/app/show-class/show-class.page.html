@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-ios" text-center>Picture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+      <ion-img [src]="showImage()"> </ion-img>
+      <ion-card-header>
+      <ion-card-title mode="ios"> Image text </ion-card-title>
+      </ion-card-header>
+    <ion-card-content mode ="ios">
+      <ion-item lines="none" *ngFor="let result of this.results">{{result}}</ion-item>
+    </ion-card-content>
+    </ion-card>
+</ion-content>
